@@ -1,20 +1,25 @@
+import './ExpenseItem.css';
+
 function ExpenseItem() {
-    return  (
-        <div>
+    return (
+        <div className="expense-item" >
             <div>
-                <h3>Food Items Rs 10</h3>
+                <h1>Expense Items</h1>
             </div>
-            <div>
-                <h3>Petrol Rs 100</h3>
+            <div className="expense-item_description">
+                <h2>Food </h2>
+                <div className="expense-item-price">Rs 10</div>
             </div>
-            <div>
-                <h3>Movies Rs 200</h3>
+            <div className="expense-item_description">
+                <h2>Petrol</h2>
+                <div className="expense-item-price">Rs 100</div>
+            </div>
+            <div className="expense-item_description">
+                <h2>Movies</h2>
+                <div className="expense-item-price">Rs 200</div>
             </div>
         </div>
-       
-    )
-         
-          
+    );
 }
 
 export default ExpenseItem;
