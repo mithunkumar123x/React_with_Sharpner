@@ -58,7 +58,7 @@ const App = () => {
   ];
   return (
     <div className="App">
-      {expenses.map((expense,index)=>(
+      {expenses.map( (expense,index)=>(
         <ExpenseItem 
         key = {index}
         title = {expense.title}
