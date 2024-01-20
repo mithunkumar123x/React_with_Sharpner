@@ -5,22 +5,27 @@ import Card from './Card' ;
 
 function ExpenseItem(props){
 
+// function clickHandler() {}
 
-    const LocationOfExpenditure = ["Resturant","Fuel" ,"Cinema hall" ]; 
-     console.log(props);
+      const clickHandler =() => {
+        console.log('clicked!!!');
+      };
+
+      const removeHandler =() => {
+        console.log('delete!!')
+      }
+   
     return ( 
         <Card className="expense-item">
-
-     
-          
+            <ExpenseDate date={props.date} />
         <div className="expense-item_description">
-       
           <h2>{props.title}</h2>
           <div className="expense-item-price">${props.amount}</div>
-          <div className = ""> </div>
-          <ExpenseDate date={props.date} />
+          <div className = "expense-item-location">{props.LocationOfExpenditure} </div>
+        
         </div>
-      
+      <button onClick ={clickHandler} >Change Title</button>
+      <button onClick = {removeHandler}>Delete</button>
     </Card>
   );
 }
