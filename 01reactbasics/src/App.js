@@ -58,14 +58,16 @@ const App = () => {
   ];
   return (
     <div className="App">
-      {expenses.map( (expense,index)=>(
-        <ExpenseItem 
-        key = {index}
+      <h1>Expense List : </h1>
+      {expenses.map((expense,index)=>(
+        <ExpenseItem
+        key = {expense.id}
         title = {expense.title}
         date ={expense.date}
         amount={expense.amount}
         localExpenditure={expense.localExpenditure} />
-      ))}
+      
+    ))}
     </div>
   );
 }
