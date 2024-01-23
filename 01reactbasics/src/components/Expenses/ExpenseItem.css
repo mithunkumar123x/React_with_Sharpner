@@ -1,11 +1,11 @@
 .expense-item {
-  background-color: rgb(9, 14, 11);
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
   margin: 1rem 0;
-  background-color: #cf2727;
+  background-color: darkgreen;
   font-size: 24px;
   
 }

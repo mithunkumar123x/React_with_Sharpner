@@ -1,4 +1,5 @@
-import ExpenseItem from './components/ExpenseItem';
+import React from 'react';
+import Expenses from './components/Expenses/Expenses';
 
 
 const App = () => {
@@ -56,20 +57,21 @@ const App = () => {
       localExpenditure:"Banglore"
     },
   ];
-  return (
-    <div className="App">
-      <h1>Expense List : </h1>
-      {expenses.map((expense,index)=>(
-        <ExpenseItem
-        key = {expense.id}
-        title = {expense.title}
-        date ={expense.date}
-        amount={expense.amount}
-        localExpenditure={expense.localExpenditure} />
-      
-    ))}
-    </div>
+
+  return React.createElement(
+    'div' ,
+    {} ,
+    React.createElement('h2', {} ,  "Expenses :" ),
+    React.createElement(Expenses,{items: expenses})
   );
-}
+  // return (
+
+ 
+  //   <div>
+  //     <h2>Expenses :</h2>
+  //     <Expenses items = {expenses} />
+  //   </div>
+  //   )
+  }
 
 export default App;
