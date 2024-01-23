@@ -9,3 +9,6 @@ you have 100 expenses you would have to write ExpenseItems Component 100 times.
 Making Components Smaller and Readable.
 
  I've used LocationOfExpenditure.map to dynamically render each location based on your array.
+
+Manipulating the DOM - REACT STATES : 
+ add a button next to each expense which changes expense to 100$ whenever we click on it.Use same logic as change title.
