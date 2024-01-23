@@ -14,12 +14,15 @@ const ExpenseForm = () => {
     enteredDate : ''
   });
 
+
+
   const titleChangeHandler = (event) => {
     //setEnteredTitle(event.target.value)
     // setUserInput({
     //   ...userInput,
     //   enteredTitle: event.target.value,
     // });
+
     setUserInput((prevState) => {
       return { ...prevState, enteredTitle: event.target.value };
     });
@@ -49,13 +52,25 @@ const ExpenseForm = () => {
   });
     console.log(event.target.value);
   }
-  
+
   const locationChangeHandler = (event) => {
     console.log(event.target.value);
   }
 
+  const submitHandler = (event) => {
+     event.preventDefault();
+
+     const expenseData = {
+      // title : enteredTitle,
+      // amount: enteredAmount,
+      // date: new Date(enteredDate)
+     };
+
+     console.log(expenseData);
+  };
+
     return(
-        <form>
+        < form  onSubmit={submitHandler}>
             <div className="new-expense_controls">
                 <div className="new-expense_control">
                    <label>Expense  title : </label>
