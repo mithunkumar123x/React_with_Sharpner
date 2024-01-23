@@ -34,8 +34,8 @@ console.log('ExpenseItem evaluated by React');
    
     return ( 
         <Card className='expense-item'>
-            <ExpenseDate date={props.date} />
-        <div className="expense-item_description">
+          <ExpenseDate date={props.date} />
+          <div className="expense-item_description">
           <h2>{title}</h2>
           <div className="expense-item-price">${amount}</div>
           <div className = "expense-item-location">{props.LocationOfExpenditure} </div>
