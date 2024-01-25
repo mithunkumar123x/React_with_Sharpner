@@ -16,3 +16,6 @@ Manipulating the DOM - REACT STATES :
 Creating my  own first Component : 
 
  [Only when the form is visible on the screen try this] - Whenever the user types anything on the screen anything on the form show that in console.log .You simply have to use vanilla JS. - 'onChange' and event object
+
+ Add two way binding : this is useful on form submission
+ add setuserInput and add value in input tag.
