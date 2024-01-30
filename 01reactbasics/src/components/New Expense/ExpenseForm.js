@@ -4,9 +4,9 @@ import './ExpenseForm.css';
 
 const ExpenseForm = () => {
 
-  let title = '';
-  let amount = '';
-  let date = '';
+  // let title = '';
+  // let amount = '';
+  // let date = '';
    
   // const [enteredTitle , setEnteredTitle ] = useState('');
   // const [enteredAmount , setEnteredAmount] = useState('');
