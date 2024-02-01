@@ -1,78 +1,55 @@
-import React from 'react';
-import Expenses from './components/Expenses/Expenses';
+import React, { useState } from "react";
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/New Expense/NewExpense";
 
-import  NewExpense from './components/Expenses/New Expense/NewExpense';
+const DUMMY_EXPENSES = [
+  {
+    id: Math.random().toString(),
+    date: new Date(2023, 2, 22),
+    title: "Car Insurance",
+    amount: 355.5,
+    location: "Park Street",
+  },
+  {
+    id: Math.random().toString(),
+    date: new Date(2022, 5, 12),
+    title: "Books",
+    amount: 56.2,
+    location: "Book Market",
+  },
+  {
+    id: Math.random().toString(),
+    date: new Date(2021, 3, 25),
+    title: "Desk",
+    amount: 425.5,
+    location: "Karol Bagh",
+  },
+  {
+    id: Math.random().toString(),
+    date: new Date(2021, 4, 21),
+    title: "I Pod",
+    amount: 388.5,
+    location: "Boring Road",
+  },
+];
 
 const App = () => {
-  const expenses = [
-    {
-      id: 'e1',
-      title: '  Chopstick',
-      amount: 94.12,
-      date: new Date(2020, 7, 14),
-      localExpenditure:"Pune"
-    },
-    { id: 'e2', 
-    title: 'New TV',
-     amount: 799.49,
-      date: new Date(2021, 2, 12),
-      localExpenditure:"Delhi" },
-    {
-      id: 'e3',
-      title: 'Car Insurance',
-      amount: 294.67,
-      date: new Date(2021, 2, 28),
-      localExpenditure:"Mumbai"
-    },
-    {
-      id: 'e4',
-      title: 'New Desk (Wooden)',
-      amount: 450,
-      date: new Date(2021, 5, 12),
-      localExpenditure:"Banglore"
-    },
-    {
-      id: 'e5',
-      title: 'glass',
-      amount: 94.12,
-      date: new Date(2020, 7, 14),
-      localExpenditure:"Pune"
-    },
-    { id: 'e6', 
-    title: 'New TV', 
-    amount: 799.49, 
-    date: new Date(2021, 2, 12),
-    localExpenditure:"Delhi" },
-    {
-      id: 'e7',
-      title: 'Car Insurance',
-      amount: 294.67,
-      date: new Date(2021, 2, 28),
-      localExpenditure:"Mumbai"
-    },
-    {
-      id: 'e8',
-      title: 'New Desk (Wooden)',
-      amount: 450,
-      date: new Date(2021, 5, 12),
-      localExpenditure:"Banglore"
-    },
-  ];
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
-  // return React.createElement(
-  //   'div' ,
-  //   {} ,
-  //   React.createElement('h2', {} ,  "Expenses :" ),
-  //   React.createElement(Expenses,{items: expenses})
-  // );
+  const addExpenseHandler = (expense) => {
+    setExpenses( (prevExpenses) => {
+      return [expense, ...prevExpenses];
+    })
+    // console.log('In App.js');
+    // console.log(expense);
+  };
+
   return (
-
- 
     <div>
-     <NewExpense />
-      <Expenses items = {expenses} />
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
     </div>
-    )
-  }
+  );
+};
 
 export default App;

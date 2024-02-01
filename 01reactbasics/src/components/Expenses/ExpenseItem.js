@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import ExpenseDate from './ExpenseDate';
 
 import './ExpenseItem.css';
-import Card from './UI/Card'
+import Card from '../UI/Card'
 
 
 
@@ -32,7 +32,7 @@ console.log('ExpenseItem evaluated by React');
         console.log('delete!!')
       }
    
-    return ( 
+    return (  
         <Card className='expense-item'>
           <ExpenseDate date={props.date} />
           <div className="expense-item_description">
