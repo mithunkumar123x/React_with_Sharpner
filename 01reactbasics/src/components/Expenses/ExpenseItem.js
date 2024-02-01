@@ -33,6 +33,7 @@ console.log('ExpenseItem evaluated by React');
       }
    
     return (  
+      <li>
         <Card className='expense-item'>
           <ExpenseDate date={props.date} />
           <div className="expense-item_description">
@@ -46,6 +47,7 @@ console.log('ExpenseItem evaluated by React');
       <button onClick ={clickHandler} >Change Title</button>
       <button onClick = {removeHandler}>Delete</button>
     </Card>
+    </li>
   );
 }
 
