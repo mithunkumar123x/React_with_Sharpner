@@ -32,7 +32,7 @@ console.log('ExpenseItem evaluated by React');
         console.log('delete!!')
       }
    
-    return ( 
+    return (  
         <Card className='expense-item'>
           <ExpenseDate date={props.date} />
           <div className="expense-item_description">
