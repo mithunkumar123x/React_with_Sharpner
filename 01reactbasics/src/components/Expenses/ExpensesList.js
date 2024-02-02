@@ -11,7 +11,7 @@ const ExpenseList = props => {
     if(props.items.length === 0) {
       return <h2 className='expenses-List_fallback'>Found no expenses.</h2>
     }
-    if(props.items.length === 1) {
+    else if (props.items.length === 1) {
         return <h2 className='expenses-List_fallback'>Only single Expense here. Please add more...</h2>
       }
     return <ul className="expenses-List">
